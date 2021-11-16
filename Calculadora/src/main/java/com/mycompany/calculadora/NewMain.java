@@ -5,6 +5,7 @@
 package com.mycompany.calculadora;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 /**
  *
@@ -52,16 +53,16 @@ public class NewMain {
 
                 System.out.println("\n");
 
-                float operando1, operando2;
+                double operando1, operando2;
 
                 System.out.print("Introduzca el primer operando: ");
-                operando1 = Float.parseFloat(sc.nextLine());
+                operando1 = Double.parseDouble(sc.nextLine());
                 switch (opcion) {
 
                     case 1: case 2: case 3: case 4: case 5:
                         //Suma, resta, multiplicación, división y potencia
                         System.out.print("Introduzca el segundo operando: ");
-                        operando2 = Float.parseFloat(sc.nextLine());
+                        operando2 = Double.parseDouble(sc.nextLine());
                         break;
                     case 6: //Raíz cuadrada
                         break;
@@ -84,7 +85,7 @@ public class NewMain {
                         System.out.println("El resultado de la división es " + (operando1 / operando2));
                         break;
                     case 5: //Potencia
-                        System.out.println("La potencia de elevar " + operando1 + " a " + operando2 + " es " + Math.sqrt(operando1,operando2));
+                        System.out.println("La potencia de elevar " + operando1 + " a " + operando2 + " es " + Math.pow(operando1,operando2));
                         break;
                     case 6: //Raíz cuadrada
                         System.out.println("La raíz cuadrada de " + operando1 + " es " + Math.sqrt(operando1));
